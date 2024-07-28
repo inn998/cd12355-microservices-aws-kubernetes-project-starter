@@ -10,7 +10,7 @@ phases:
       - docker tag coworking-analytics:latest <account_id>.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:$CODEBUILD_BUILD_NUMBER
   post_build:
     commands:
-      - docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:$CODEBUILD_BUILD_NUMBER
+      - docker push sunjiawei@ymail.ne.jp.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:$CODEBUILD_BUILD_NUMBER
 
 artifacts:
   files:
