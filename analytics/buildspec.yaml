@@ -3,14 +3,14 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin sunjiawei@ymail.ne.jp.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 010526249026.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - docker build -t coworking-analytics .
       - docker tag coworking-analytics:latest <account_id>.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:$CODEBUILD_BUILD_NUMBER
   post_build:
     commands:
-      - docker push sunjiawei@ymail.ne.jp.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:$CODEBUILD_BUILD_NUMBER
+      - docker push 010526249026.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:$CODEBUILD_BUILD_NUMBER
 
 artifacts:
   files:
