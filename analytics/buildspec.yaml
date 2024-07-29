@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/x3i3c2n9
+      - echo Skipping login for public ECR
   build:
     commands:
       - docker build -t coworking-analytics .
